@@ -1,12 +1,19 @@
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <%
 //TODO: if direct access, send back to index
 
 %>
+
 <html>
 <head>
 <title>Edit Item</title> </head>
 <body>
 <h3>Edit Item</h3>
+
+<!-- to display form errors -->
+<!-- FIXME -->
+<%-- <form:errors path="item.*"/> --%>
+
 <p style="color:red;">${error}</p>
 <form method="POST" action="/update-item">
 	<input type="hidden" name="id" value="${item.id}" />

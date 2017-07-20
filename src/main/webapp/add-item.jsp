@@ -1,8 +1,13 @@
+<%@taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <html>
 <head>
 <title>Add Item</title> </head>
 <body>
 <h3>Add Item</h3>
+
+<!-- to display form errors -->
+<%-- <form:errors path="item.*"/> --%>
+
 <p style="color:red;">${error}</p>
 <form method="POST" action="/add-item">
 	Name: <input type="text" name="name" required="required"/> <br/>
